@@ -13,20 +13,26 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
             new Character {ID = 1, Name = "Seagul"}
         };
 
-        public async Task<List<Character>> GetAllCombatants()
+        public async Task<ServiceResponse<List<Character>>> GetAllCombatants()
         {
-            return Combatants;
+            var serviceResponse = new ServiceResponse<List<Character>>();
+            serviceResponse.Data = Combatants;
+            return serviceResponse;
         }
 
-        public async Task<Character> GetCombatanatByID(int id)
+        public async Task<ServiceResponse<Character>> GetCombatanatByID(int id)
         {
-            return Combatants.FirstOrDefault(c => c.ID == id);        
+            var serviceResponse = new ServiceResponse<Character>();
+            serviceResponse.Data = Combatants.FirstOrDefault(c => c.ID == id);      
+            return serviceResponse;  
         }
 
-        public async Task<List<Character>> AddComatant(Character newCombatant)
+        public async Task<ServiceResponse<List<Character>>> AddComatant(Character newCombatant)
         {
+            var serviceResponse = new ServiceResponse<List<Character>>();
             Combatants.Add(newCombatant);
-            return Combatants;
+            serviceResponse.Data = Combatants;
+            return serviceResponse;
         }
     }
 }
