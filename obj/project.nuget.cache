@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PIAOGaSi7s5pX5FHtq+sr4gxz4vZJBvo/6WoIXFYX8Fh8Csgvjn2Iyo4bosX03XTiRObbbXuqqvLy6qHN+5ROw==",
+  "dgSpecHash": "bn9ukvhyI9DNKwF8AjjRW2WUiWyGg+YBlKqIL+rvKDigGvyCK9TZch6yyZB9EYXbzOXpmxfOvLw4tP7v+OCbzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\.NET-Web-API-Tutorial\\.NET-Web-API-Tutorial.csproj",
+  "projectFilePath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\dotnet-Web-API-Tutorial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\.NET-Web-API-Tutorial\\.NET-Web-API-Tutorial.csproj",
-      "projectName": ".NET-Web-API-Tutorial",
-      "projectPath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\.NET-Web-API-Tutorial\\.NET-Web-API-Tutorial.csproj",
+      "projectUniqueName": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\dotnet-Web-API-Tutorial.csproj",
+      "projectName": "dotnet-Web-API-Tutorial",
+      "projectPath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\dotnet-Web-API-Tutorial.csproj",
       "packagesPath": "C:\\Users\\alexander.fransson3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\.NET-Web-API-Tutorial\\obj\\",
+      "outputPath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexander.fransson3\\AppData\\Roaming\\NuGet\\NuGet.Config",
