@@ -3,6 +3,7 @@ using dotnet_Web_API_Tutorial.Models;
 using System.Collections.Generic;
 using dotnet_Web_API_Tutorial.Services.CombatantService;
 using System.Threading.Tasks;
+using dotnet_Web_API_Tutorial.DTOs.CombatantDTOs;
 
 namespace dotnet_Web_API_Tutorial.Controllers
 {
@@ -18,19 +19,19 @@ namespace dotnet_Web_API_Tutorial.Controllers
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<ServiceResponse<List<Character>>>> Get()
+        public async Task<ActionResult<ServiceResponse<List<GetCombatantDTO>>>> Get()
         {
             return Ok(await _combatantService.GetAllCombatants());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ServiceResponse<Character>>> GetOne(int id)
+        public async Task<ActionResult<ServiceResponse<GetCombatantDTO>>> GetOne(int id)
         {
             return Ok( await _combatantService.GetCombatanatByID(id));
         }
 
         [HttpPost]
-        public async Task<ActionResult<ServiceResponse<List<Character>>>> AddCombatant(Character newCombatant){
+        public async Task<ActionResult<ServiceResponse<List<GetCombatantDTO>>>> AddCombatant(AddCombatantDTO newCombatant){
             return Ok(await _combatantService.AddComatant(newCombatant));
         }
     }
