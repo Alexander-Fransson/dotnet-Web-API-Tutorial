@@ -33,7 +33,6 @@ namespace _NET_Web_API_Tutorial
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "_NET_Web_API_Tutorial", Version = "v1" });
             });
-            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<ICombatantService, CombatantService>();
         }
 
