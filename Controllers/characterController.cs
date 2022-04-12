@@ -36,7 +36,32 @@ namespace dotnet_Web_API_Tutorial.Controllers
 
         [HttpPut]
         public async Task<ActionResult<ServiceResponse<Character>>> UpdateCombatant(Character updatedCombatant){
-            return Ok(await _combatantService.updateCharacter(updatedCombatant));
+            
+            var response = await _combatantService.updateCharacter(updatedCombatant);
+
+            if(response.Data == null)
+            {
+                return NotFound(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
+        }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ServiceResponse<List<Character>>>> DeleteCombatant(int id)
+        {
+            var response = await _combatantService.DeleteCombatant(id);
+
+            if(response.Data == null)
+            {
+                return NotFound(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
+
         }
     }
 }
