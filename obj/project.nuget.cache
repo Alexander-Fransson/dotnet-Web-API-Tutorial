@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "V9qOpu+Yda0H+yRipuqTOALd2AMEPSgbbAbmaHdNpzLg7FK5F/gYLJKOL+DiS2QsZMPXha7eIkfEi39lU1avHg==",
+  "dgSpecHash": "ldnqF6cK3PpUUlQoc6LFLuFwDnVUIbC3mfCGGk48F3iC3rt9m+S0gMxci1qehV8HuaIOXGvqe2rIM3YYwXvEdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\dotnet-Web-API-Tutorial.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alexander.fransson3\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
-    "C:\\Users\\alexander.fransson3\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
-    "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\alexander.fransson3\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",

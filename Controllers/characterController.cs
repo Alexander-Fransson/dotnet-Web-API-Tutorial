@@ -33,5 +33,10 @@ namespace dotnet_Web_API_Tutorial.Controllers
         public async Task<ActionResult<ServiceResponse<List<Character>>>> AddCombatant(Character newCombatant){
             return Ok(await _combatantService.AddComatant(newCombatant));
         }
+
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<Character>>> UpdateCombatant(Character updatedCombatant){
+            return Ok(await _combatantService.updateCharacter(updatedCombatant));
+        }
     }
 }

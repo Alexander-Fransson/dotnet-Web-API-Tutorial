@@ -34,5 +34,21 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
             serviceResponse.Data = Combatants;
             return serviceResponse;
         }
+
+        public async Task<ServiceResponse<Character>> updateCharacter(Character updatedCombatant){
+            var serviceResponse = new ServiceResponse<Character>();
+            Character combatant = Combatants.FirstOrDefault(c => c.ID == updatedCombatant.ID); 
+
+            combatant.Name = updatedCombatant.Name;
+            combatant.HP = updatedCombatant.HP;
+            combatant.DP = updatedCombatant.DP;
+            combatant.IP = updatedCombatant.IP;
+            combatant.SP = updatedCombatant.SP;
+            combatant.ID = updatedCombatant.ID;
+            combatant.Class = updatedCombatant.Class;
+
+            serviceResponse.Data = combatant;
+            return serviceResponse;
+        }
     }
 }
