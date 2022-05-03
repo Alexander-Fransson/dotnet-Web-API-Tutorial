@@ -13,25 +13,32 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
             new Character {ID = 1, Name = "Seagul"}
         };
 
+        private readonly DataContext _context;
+        public CombatantService(DataContext context)
+        {
+            _context = context;
+        }
+
         public async Task<ServiceResponse<List<Character>>> GetAllCombatants()
         {
             var serviceResponse = new ServiceResponse<List<Character>>();
-            serviceResponse.Data = Combatants;
+            serviceResponse.Data = _context.Characters.ToList();
             return serviceResponse;
         }
 
         public async Task<ServiceResponse<Character>> GetCombatanatByID(int id)
         {
             var serviceResponse = new ServiceResponse<Character>();
-            serviceResponse.Data = Combatants.FirstOrDefault(c => c.ID == id);      
+            serviceResponse.Data = _context.Characters.FirstOrDefault(c => c.ID == id);      
             return serviceResponse;  
         }
 
         public async Task<ServiceResponse<List<Character>>> AddComatant(Character newCombatant)
         {
             var serviceResponse = new ServiceResponse<List<Character>>();
-            Combatants.Add(newCombatant);
-            serviceResponse.Data = Combatants;
+            _context.Characters.Add(newCombatant);
+            _context.SaveChanges();
+            serviceResponse.Data = _context.Characters.ToList();
             return serviceResponse;
         }
 
@@ -39,7 +46,7 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
             var serviceResponse = new ServiceResponse<Character>();
 
             try{
-                Character combatant = Combatants.FirstOrDefault(c => c.ID == updatedCombatant.ID); 
+                Character combatant = _context.Characters.FirstOrDefault(c => c.ID == updatedCombatant.ID); 
 
                 combatant.Name = updatedCombatant.Name;
                 combatant.HP = updatedCombatant.HP;
@@ -50,6 +57,8 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
                 combatant.Class = updatedCombatant.Class;
 
                 serviceResponse.Data = combatant;
+                _context.SaveChanges();
+
 
             }
             catch(System.NullReferenceException ex)
@@ -64,9 +73,10 @@ namespace dotnet_Web_API_Tutorial.Services.CombatantService
         var serviceResponse = new ServiceResponse<List<Character>>();
 
             try{
-                Character combatant = Combatants.First(c => c.ID == id); 
+                Character combatant = _context.Characters.First(c => c.ID == id); 
 
-                Combatants.Remove(combatant);
+                _context.Characters.Remove(combatant);
+                _context.SaveChanges();
                 serviceResponse.Data = Combatants;
             }
             catch(System.NullReferenceException ex)
