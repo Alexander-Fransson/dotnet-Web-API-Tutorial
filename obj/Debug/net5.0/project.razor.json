@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\.NET-Web-API-Tutorial.csproj",
+  "FilePath": "c:\\Users\\alexander.fransson3\\Documents\\GitHub\\dotnet-Web-API-Tutorial\\dotnet-Web-API-Tutorial.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "_NET_Web_API_Tutorial",
+  "RootNamespace": "dotnet_Web_API_Tutorial",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
